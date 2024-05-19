@@ -1,18 +1,13 @@
-function Card() {
-  // You are going to need state and to handle side effects if you use APIs here
+import "..styles/Card.scss";
 
+const Card = ({ url, alt, content, id, handleClick }) => {
   return (
-    // Card Container -> Then image container
-
-    <div className="cardContainer">
-      <img
-        src="https://unsplash.com/photos/the-sun-is-setting-over-the-clouds-in-the-sky-XxCQrkpkUtE"
-        alt="sunset"
-      />
-      <h3>Image with some text</h3>
+    <div className="card-content" onClick={handleClick} id={id}>
+      <img src={url} alt={alt} />
+      <p>{content}</p>
     </div>
   );
-}
+};
 
 export default Card;
 
