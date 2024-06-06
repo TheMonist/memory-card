@@ -22,11 +22,8 @@ function App() {
 
   const randomizeCards = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
-      const element = array[i];
-      const j = (Math.floor(Math.random() * (i + 1))[(array[i], array[j])] = [
-        array[j],
-        array[i],
-      ]);
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
   };
@@ -41,7 +38,7 @@ function App() {
           );
           const data = await response.json();
           const picture =
-            data.sprites.other["official-artwork"]["front-default"];
+            data.sprites.other["official-artwork"]["front_default"];
           photos.push(picture);
         };
 

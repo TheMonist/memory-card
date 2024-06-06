@@ -5,7 +5,9 @@ const Card = ({ photo, className, handleClick, id }) => {
       className={className}
       key={id}
       id={id}
-      onClick={(e) => handleClick(e)}
+      onClick={(e) => {
+        handleClick(e);
+      }}
       style={{ backgroundImage: photoUrl }}
     ></div>
   );
