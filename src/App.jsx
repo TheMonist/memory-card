@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import Card from "./components/Card";
+import Header from "./components/Header";
+import CardData from "./components/CardData";
+import Gameboard from "./components/Gameboard";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -50,7 +52,46 @@ function App() {
           await getPokemonImg("gengar");
           await getPokemonImg("psyduck");
           setCards({
-            // Insert Component Here
+            charizard: (
+              <Card
+                photo={photos[0]}
+                className={"charizard"}
+                handleClick={handleClick}
+                id={"charizard"}
+              />
+            ),
+            mewtwo: (
+              <Card
+                photo={photos[1]}
+                className={"mewtwo"}
+                handleClick={handleClick}
+                id={"mewtwo"}
+              />
+            ),
+            primeape: (
+              <Card
+                photo={photos[2]}
+                className={"primeape"}
+                handleClick={handleClick}
+                id={"primeape"}
+              />
+            ),
+            gengar: (
+              <Card
+                photo={photos[3]}
+                className={"gengar"}
+                handleClick={handleClick}
+                id={"gengar"}
+              />
+            ),
+            psyduck: (
+              <Card
+                photo={photos[4]}
+                className={"psyduck"}
+                handleClick={handleClick}
+                id={"psyduck"}
+              />
+            ),
           });
         };
         populatePhotos();
@@ -76,7 +117,7 @@ function App() {
     console.log(e.target.id);
 
     setCardsClicked((prevState) => {
-      let updatedCardsClick = [...prevState];
+      let updatedCardsClick = { ...prevState };
 
       if (updatedCardsClick(e.target.id)) {
         updatedCardsClick = resetClicks;
@@ -104,11 +145,11 @@ function App() {
 
   return (
     <>
-      <Card />
+      <Header />
+      <CardData score={score} highScore={highScore} />
+      <Gameboard cardOrder={cardOrder} cards={cards} />
     </>
   );
 }
 
 export default App;
-// https://github.com/Realmbird/Memory-Card
-// https://github.com/Potrocio/project-memory-card

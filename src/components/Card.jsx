@@ -1,14 +1,14 @@
-import "..styles/Card.scss";
-
-const Card = ({ url, alt, content, id, handleClick }) => {
+const Card = ({ photo, className, handleClick, id }) => {
+  const photoUrl = `url(${photo})`;
   return (
-    <div className="card-content" onClick={handleClick} id={id}>
-      <img src={url} alt={alt} />
-      <p>{content}</p>
-    </div>
+    <div
+      className={className}
+      key={id}
+      id={id}
+      onClick={(e) => handleClick(e)}
+      style={{ backgroundImage: photoUrl }}
+    ></div>
   );
 };
 
 export default Card;
-
-// https://www.codinn.dev/articles/react-cards

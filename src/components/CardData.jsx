@@ -1,4 +1,5 @@
-// import scss files
+import "../styles/Card.scss";
+
 const CardData = ({ score, highScore }) => {
   return (
     <div className="cardData">

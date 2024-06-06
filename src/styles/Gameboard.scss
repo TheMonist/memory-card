@@ -1,0 +1,71 @@
+.gameboard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
+
+    div {
+        border: 2px solid gray;
+        box-shadow: 0 0 20px 5px yellow;
+        height: 45vh;
+        width: 13vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform .05s ease-in-out;
+        background-color: rgba(1, 1, 51);
+        border-radius: 20px;
+    }
+
+    &:hover {
+        cursor: grab;
+        box-shadow: 0 0 20px 5px green;
+        transform: scale(1.05);
+    }
+
+    @media(min-width: 300px) and (max-width: 500px) {
+        height: 68vh;
+        flex-wrap: wrap;
+
+        div {
+            height: 22vh;
+            width: 28vw;
+            transition: transform ease-out;
+        }
+
+        &:hover {
+            cursor: initial;
+            box-shadow: initial;
+            transform: initial;
+        }
+
+        &:active {
+            cursor: grab;
+            box-shadow: 0 0 20px 12px green;
+            transform: scale(1.05);
+        }
+    }
+
+    @media(min-width: 500px) and (max-width: 1200px) {
+        height: 68vh;
+        flex-wrap: wrap;
+
+        div {
+            height: 28vh;
+            width: 25vw;
+            transition: transform ease-out;
+        }
+
+        &:hover {
+            cursor: initial;
+            box-shadow: initial;
+            transform: initial;
+        }
+
+        &:active {
+            cursor: grab;
+            box-shadow: 0 0 20px 12px green;
+            transform: scale(1.05);
+        }
+    }
+}

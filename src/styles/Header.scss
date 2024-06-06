@@ -1,0 +1,23 @@
+.title {
+    width: 100vw;
+    text-align: center;
+    /* background-color: */
+    margin-top: 0;
+    height: 13vh;
+    align-content: center;
+    /* color: */
+    text-shadow: 0 0 1px rgba(255, 215, 0 , 1), 0 0 5px rgba(255, 165, 0, 1), 0 0 20px rgba(255, 69, 0, 1);
+    font-size: 3em;
+    margin-bottom: 0;
+
+    @media (min-width: 300px) and (max-width: 500px) {
+        font-size: 2em;
+        height: 12vh;
+    }
+    
+    @media (min-width: 500px) and (max-width: 1200px) {
+        font-size: 3em;
+        height: 12vh;
+    }
+}
+
