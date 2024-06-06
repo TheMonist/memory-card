@@ -114,10 +114,10 @@ function App() {
     console.log(e.target.id);
 
     setCardsClicked((prevState) => {
-      let updatedCardsClick = { ...prevState };
+      let updatedCardsClicked = { ...prevState };
 
-      if (updatedCardsClick(e.target.id)) {
-        updatedCardsClick = resetClicks;
+      if (updatedCardsClicked(e.target.id)) {
+        updatedCardsClicked = resetClicks;
         setScore(0);
         // Maybe remove this alert
         alert("Thanks for Playing");
@@ -134,9 +134,9 @@ function App() {
           });
           return updatedScore;
         });
-        updatedCardsClick[e.target.id] = true;
+        updatedCardsClicked[e.target.id] = true;
       }
-      return updatedCardsClick;
+      return updatedCardsClicked;
     });
   };
 

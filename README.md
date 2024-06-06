@@ -1,8 +1,19 @@
-# React + Vite
+# Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The memory game is a common children's game played with a set of cards. The cards have a pictures on one side and each picture appears on two (or sometimes four) cards. The game starts with all the cards face down and players take turns to turn over two cards. If the two cards have the same picture, then they keep the cards, otherwise they turn the cards face down again. The winner is the person with the most cards when all the cards have been taken.
 
-Currently, two official plugins are available:
+How to play:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- When loaded, the page generates a random order of cards
+- The goal is to turn over pairs of matching cards
+
+This uses the following technologies:
+
+- React
+- SCSS
+- Poke API (A pokemon API)
+
+This app demonstrates:
+
+- The use of React and useState to manage and utilize state
+- The use of React and useEffect to call external APIs
